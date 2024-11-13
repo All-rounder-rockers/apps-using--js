@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var choice = prompt("welcome to area calculator\n1.area of spuare\n2.area of rectangles\n3.area of circle \n4.area of triangle")
+
+        if (choice == "1"){
+var side=prompt("enter the side of the square")
+var area=side*side
+alert("area of square is "+area)
+
+        }
+
+        if (choice == "2"){
+var length=prompt("enter the length")
+var breadth=prompt("enter the breadth")
+var area=length*breadth
+alert("area of rectangle is "+area)
+
+        }
+
+
+
+        if (choice == "3"){
+var radius=prompt("enter the radius")
+
+var area=3.14*radius*radius
+alert("area of circle is "+area)
+
+        }
+
+
+        
+        if (choice == "4"){
+var base=prompt("enter the base")
+var height=prompt("enter the height")
+var area=base*height*0.5
+alert("area of triangle is "+area)
+
+        }
+    </script>
+</body>
+
+</html>
