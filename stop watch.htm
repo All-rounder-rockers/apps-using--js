@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="wrapper">
+<p><span id="seconds">00</span>:<span id="milliseconds">00</span>00</p>
+  </div> 
+  <button id="start">start</button>
+  <button id="stop">stop</button>
+  <button id="reset">reset</button>
+<script>
+    window.onload= function(){
+
+    var seconds="00" ;
+    var milliseconds="00" ;
+    var apendmilliseconds=document.getElementById("milliseconds")
+    var apendseconds=document.getElementById("seconds")
+    var startbtn=document.getElementById("start")
+    var stopbtn=document.getElementById("stop")
+    var resetbtn=document.getElementById("reset")
+    var interval
+
+startbtn.onclick=function(){
+
+
+    clearInterval(Interval)
+    interval=setInterval(starTimer,10)
+}
+stopbtn.onclick=function(){
+    clearInterval(Interval)
+}
+
+resetbtn.onclick=function(){
+    clearInterval(Interval)
+    milliseconds="00"
+    seconds="00"
+    apendmilliseconds=InnerHTML=milliseconds
+    apendseconds=InnerHTML=seconds
+
+}
+
+function startTimer(){
+
+milliseconds++;
+
+if(milliseconds <= 9){
+
+appendmilliseconds.innerHTML = "0" + milliseconds;
+
+}
+
+if (milliseconds > 9){
+
+appendmilliseconds.innerHTML = milliseconds;
+
+}
+
+if (milliseconds > 99) {
+
+seconds++;
+
+appendSeconds.innerHTML = "0" + seconds;
+
+milliseconds = 0;
+
+appendmilliseconds.innerHTML = "0" + 0;
+
+}
+
+if (seconds > 9){
+
+appendSeconds.innerHTML = seconds;
+
+}
+
+
+
+
+    }}
+</script>
+</body>
+</html>
